@@ -1,4 +1,4 @@
-function getUbication() {
+function muestraUbication() {
     if(navigator.geolocation) {
         
         navigator.geolocation.getCurrentPosition(muestraPosicion);
