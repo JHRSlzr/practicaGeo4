@@ -1,7 +1,7 @@
-function getUbication() {
+function obtieneUbicacion() {
     if(navigator.geolocation) {
         
-        navigator.geolocation.getCurrentPosition(showPosition);
+        navigator.geolocation.getCurrentPosition(muestraPosicion);
 
 
     }
@@ -9,12 +9,12 @@ function getUbication() {
         demo.innerHTML = "EL DISPOSITIVO NO PUEDE LOCALIZARSE :("
     }
 
-    function showPosition(pos) {
-console.log(pos.coords.latitude)
-        var coords = pos.coords.latitude + "||||" + pos.coords.longitude;
+    function muestraPosicion(posicion) {
 
-        var mapimg = document.getElementById("mapimg");
-        mapimg.src = "https://maps.googleapis.com/maps/api/staticmap?center=" + coords + "&zoom=18&size=800x800&key=AIzaSyAv-m46ebIV9fqkE2fIBGeWunmGmBm2R24";
+        var coordenadas = posicion.coords.latitude + "," + posicion.coords.longitude;
+
+        var imagenmapa = document.getElementById("imagenmapa");
+        imagenmapa.src = "https://maps.googleapis.com/maps/api/staticmap?center=" + coordenadas + "&zoom=18&size=800x800&key=AIzaSyAv-m46ebIV9fqkE2fIBGeWunmGmBm2R24";
 
 
     }
