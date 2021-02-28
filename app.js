@@ -1,4 +1,4 @@
-function muestraUbication() {
+function obtieneUbicacion() {
     if(navigator.geolocation) {
         
         navigator.geolocation.getCurrentPosition(muestraPosicion);
@@ -6,7 +6,7 @@ function muestraUbication() {
 
     }
     else {
-        demo.innerHTML = "EL DISPOSITIVO NO PUEDE LOCALIZARSE :("
+        demo.innerHTML = "El navegador no dispone de la capacidad de geolocalización"
     }
 
     function muestraPosicion(posicion) {
