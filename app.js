@@ -10,7 +10,7 @@ function getUbication() {
     }
 
     function showPosition(pos) {
-
+console.log(pos.coords.latitude)
         var coords = pos.coords.latitude + "||||" + pos.coords.longitude;
 
         var mapimg = document.getElementById("mapimg");
